@@ -1,0 +1,61 @@
+:root{--paper:#e9dcc0;--paper2:#dcc9a0;--ink:#2b1d12;--moss:#4f6b3a;--madder:#7a2e2a;--gold:#b08d3c;--river:#3d5a6b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+body{margin:0;color:var(--ink);font:19px/1.7 "IM Fell English",Georgia,serif;background:
+radial-gradient(circle at 20% 10%,#f3e8cf,transparent 50%),radial-gradient(circle at 80% 90%,#cdb98b,transparent 55%),var(--paper);min-height:100vh}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;box-shadow:inset 0 0 120px rgba(60,35,10,.35)}
+main{max-width:760px;margin:0 auto;padding:0 22px 60px 54px}
+.road{position:fixed;left:6px;top:0;width:34px;height:100vh;z-index:5}
+.contents{position:sticky;top:0;z-index:10;display:flex;gap:18px;overflow-x:auto;padding:12px 22px 12px 54px;background:rgba(233,220,192,.93);border-bottom:2px double var(--madder);font:500 13px "Cinzel",serif;white-space:nowrap;scrollbar-width:none}
+.contents a{color:var(--ink);text-decoration:none}
+.contents a:hover,.contents a:focus-visible{color:var(--madder);text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.page{padding:70px 0 20px}
+h1,h2,h3{font-family:"Cinzel Decorative","Cinzel",serif;line-height:1.2;margin:0 0 .6em}
+h2{font-size:clamp(24px,5vw,34px);color:var(--madder);display:flex;align-items:center;gap:14px}
+.drop{font:56px/1 "Uncial Antiqua",serif;color:var(--gold);text-shadow:1px 1px 0 var(--ink);border:2px solid var(--ink);padding:6px 12px;background:rgba(255,255,255,.25)}
+.lead{font-size:1.25em;font-style:italic;color:var(--moss)}
+.small{font-style:italic;font-size:.95em}
+.title-page{min-height:88vh;display:grid;place-items:center;text-align:center;padding-top:30px}
+.frame{border:3px double var(--ink);outline:1px solid var(--gold);outline-offset:8px;padding:44px 26px;background:rgba(255,250,235,.35);animation:ink 1.6s ease-out both}
+h1{font-size:clamp(38px,10vw,70px);color:var(--ink);text-shadow:2px 2px 0 rgba(176,141,60,.55)}
+.pen{font:600 34px "Noto Serif Tamil",serif;color:var(--madder);margin:.2em 0}
+.sub{margin:0 0 1.4em}
+@keyframes ink{from{opacity:0;filter:blur(6px);letter-spacing:.2em}to{opacity:1;filter:none}}
+.btn{display:inline-block;font:700 15px "Cinzel",serif;color:var(--paper);background:var(--madder);padding:11px 22px;border:2px solid var(--ink);text-decoration:none;box-shadow:3px 3px 0 var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.small-btn{font-size:13px;padding:8px 14px}
+.stops{list-style:none;padding:0;margin:0;border-left:3px dashed var(--madder)}
+.stops li{margin:0 0 22px 22px;position:relative;display:grid}
+.stops li::before{content:"";position:absolute;left:-31px;top:8px;width:14px;height:14px;background:var(--gold);border:2px solid var(--ink);border-radius:50%}
+.stops b{font:700 17px "Cinzel",serif}.stops em{color:var(--moss)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.tags span{border:1.5px solid var(--ink);padding:2px 12px;background:rgba(255,255,255,.3);border-radius:2px}
+.note{border-left:4px solid var(--gold);padding-left:14px;font-style:italic}
+.scrolls{list-style:none;padding:0;display:grid;gap:14px}
+.scrolls li{padding:14px 18px;background:var(--paper2);border:1px solid var(--ink);border-radius:30px 30px 6px 6px/14px 14px 6px 6px;display:grid}
+.scrolls span{color:var(--river);font-style:italic}
+.cards{display:grid;gap:18px}
+.cards article{border:2px solid var(--ink);padding:18px;background:rgba(255,250,235,.4);transition:transform .25s}
+.cards article:hover{transform:rotate(-.6deg)}
+.cards h3{font-size:19px;color:var(--moss)}
+.pigments{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-top:18px}
+.pigments div{display:grid;justify-items:center;text-align:center;gap:2px}
+.pigments i{width:70px;height:70px;border-radius:50%;background:var(--c);border:2px solid var(--ink);box-shadow:inset -8px -8px 14px rgba(0,0,0,.35);transition:transform .3s}
+.pigments div:hover i{transform:scale(1.12) rotate(12deg)}
+.pigments b{font:700 14px "Cinzel",serif}.pigments span{font-size:.85em;font-style:italic}
+.shelf{display:flex;align-items:flex-end;gap:6px;padding:0 10px;border-bottom:10px solid #5a3a1e;overflow-x:auto}
+.shelf span{writing-mode:vertical-rl;height:var(--h);background:var(--c);color:var(--paper);font:700 14px "Cinzel",serif;padding:14px 10px;border:2px solid var(--ink);border-bottom:0;transition:transform .25s;white-space:nowrap}
+.shelf span:hover{transform:translateY(-14px)}
+.ravens{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0}
+.foot{text-align:center;font-style:italic;margin-top:50px}
+dialog{border:3px double var(--ink);background:var(--paper);color:var(--ink);padding:26px;max-width:min(420px,90vw);text-align:center;box-shadow:0 0 0 9999px rgba(30,15,5,.6);animation:pop .3s}
+dialog::backdrop{background:transparent}
+dialog h3{color:var(--madder);font-size:20px}
+@keyframes pop{from{transform:scale(.8) rotate(-3deg);opacity:0}}
+.lost h1{font-size:clamp(70px,20vw,140px)}
+.embers i{position:fixed;bottom:-10px;width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.7;animation:rise linear infinite;pointer-events:none;z-index:1}
+@keyframes rise{to{transform:translate(var(--x),-110vh);opacity:0}}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}.embers{display:none}}
+@media (min-width:700px){.cards{grid-template-columns:repeat(3,1fr)}}
